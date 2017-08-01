@@ -6,7 +6,7 @@ export function toFahrenheit(celsius) {
   return (celsius * 9 / 5) + 32;
 }
 
-function tryConvert(temperature, convert) {
+export function tryConvert(temperature, convert) {
   const input = parseFloat(temperature);
   if (Number.isNaN(input)) {
     return '';

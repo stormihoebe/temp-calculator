@@ -14,13 +14,14 @@ class TemperatureInput extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
-    this.setState({
-      temperature: e.target.value
-    });
+    // === Old ===
+    // this.setState({ temperature: e.target.value });
+
+    // === New ===
+    this.props.onTemperatureChange(e.target.value)
   }
   render() {
-    const temperature = this.state.temperature; // or destructuring, const { temperature } = this.state;
-    const scale = this.props.scale; // const { scale } = this.props;
+    const { scale, temperature} = this.props; // converted to destructuring
     return (
       <fieldset>
         <legend>Enter temperature in {scaleNames[scale]}:</legend>
