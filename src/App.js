@@ -4,8 +4,8 @@ import './App.css';
 
 /** App Component Tree
   App
-  |___ Calculator
-      |___ BoilingVerdict
+  |- Calculator
+      |- BoilingVerdict
 **/
 
 class App extends Component {
